@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\Shared\EmoteExplorer.Shared.proj" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <DefineConstants>$(DefineConstants);WIN</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="../EmoteExplorer.Core/App/emote.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Linkbase>"App"</Linkbase>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bildstein.SpiderEye.Windows" Version="1.0.0-beta.5" />
+  </ItemGroup>
+</Project>

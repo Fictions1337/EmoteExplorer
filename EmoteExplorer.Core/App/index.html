@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-icons.css">
+  <title>Emotes Explorer</title>
+</head>
+<body>
+  <!-- Main Body Container -->
+  <div class="container">
+    <!-- Navbar -->
+    <div class="row mt-3">
+      <div class="col d-flex justify-content-center">
+        <!-- Dark Mode Toggle -->
+          <button class="btn" id="themeToggle" value="true">
+            <i class='bi bi-moon'></i>
+          </button>
+
+        <!-- Search Box -->
+        <div class="input-group-sm d-flex">
+          <input type="text" class="form-control me-1" id="searchBox" placeholder="Search Emotes...">
+
+          <!-- Search Button -->
+          <button class="btn d-none" id="search"></button>
+
+          <!-- Sort Button -->
+          <button class="btn" id="sort" value="count-desc">
+            <i class="bi h3 bi-sort-down"></i>
+          </button>
+
+          <!-- Emote Size Selector -->
+          <div class="btn-group" role="group" aria-label="Size Selector">
+            <input type="radio" class="btn-check" name="size" id="small" autocomplete="off" checked>
+            <label class="btn" for="small">Small</label>
+          
+            <input type="radio" class="btn-check" name="size" id="medium" autocomplete="off">
+            <label class="btn" for="medium">Medium</label>
+          
+            <input type="radio" class="btn-check" name="size" id="large" autocomplete="off">
+            <label class="btn" for="large">Large</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emotes -->
+    <div class="row mt-3" id="emotesContainer"></div>
+
+    <!-- Next Page of Emotes -->
+    <div class="row">
+      <div class="col mb-3 d-flex justify-content-center">
+        <button class="btn d-none" id="previousPage">
+          <i class="bi bi-caret-left-fill"></i> Previous
+        </button>
+        <button class="btn d-none" id="nextPage">
+          Next <i class="bi bi-caret-right-fill"></i>
+        </button>
+      </div>
+    </div> 
+  </div>
+
+  <!-- Notifications -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <i id="status-symbol" class=''></i>
+        <strong class="me-auto" id="status">Notification</strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="statusMessage">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button type="button" class="btn d-none" id="btn-back-to-top"
+  style="position: fixed; bottom: 20px; right: 20px;">
+    <i class="bi h1 bi-arrow-up-circle"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

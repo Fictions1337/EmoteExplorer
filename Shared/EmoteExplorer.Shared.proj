@@ -1,0 +1,11 @@
+﻿<Project>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>EmoteExplorer</AssemblyName>
+    <RootNamespace>EmoteExplorer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmoteExplorer.Core\EmoteExplorer.Core.csproj" />
+  </ItemGroup>
+</Project>
